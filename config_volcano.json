@@ -1,0 +1,71 @@
+{
+  "volcano_api": {
+    "api_key": "YOUR_VOLCANO_API_KEY",
+    "endpoint_id": "YOUR_ENDPOINT_ID",
+    "region": "cn-beijing",
+    "model": "doubao-pro-32k",
+    "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+    "timeout": 60,
+    "max_retries": 3,
+    "retry_delay": 1.0
+  },
+  "model_params": {
+    "temperature": 0.7,
+    "max_tokens": 4096,
+    "top_p": 0.95,
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "stop": null
+  },
+  "optimization": {
+    "max_workers": null,
+    "use_multiprocess": false,
+    "use_async": true,
+    "batch_size": 32,
+    "queue_size": 1000,
+    "enable_cache": true,
+    "cache_dir": "cache/volcano",
+    "rate_limit": 100,
+    "rate_limit_window": 1.0,
+    "chunk_size": 2000,
+    "chunk_overlap": 200
+  },
+  "processing": {
+    "question_types": {
+      "factual": {
+        "ratio": 0.15,
+        "description": "事实型问题",
+        "temperature": 0.5
+      },
+      "comparative": {
+        "ratio": 0.15,
+        "description": "比较型问题",
+        "temperature": 0.6
+      },
+      "reasoning": {
+        "ratio": 0.50,
+        "description": "推理型问题",
+        "temperature": 0.7
+      },
+      "open": {
+        "ratio": 0.20,
+        "description": "开放型问题",
+        "temperature": 0.8
+      }
+    },
+    "quality_threshold": 0.7,
+    "min_questions_per_chunk": 3,
+    "max_questions_per_chunk": 5
+  },
+  "paths": {
+    "input_dir": "data/texts",
+    "output_dir": "data/output_volcano",
+    "qa_results_dir": "data/qa_results_volcano",
+    "log_dir": "logs/volcano"
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "logs/volcano/qa_generation.log"
+  }
+}
