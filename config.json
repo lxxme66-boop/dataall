@@ -1,0 +1,135 @@
+{
+  "api": {
+    "use_local_models": true,
+    "ark_url": "http://0.0.0.0:8080/v1",
+    "api_key": "EMPTY",
+    "use_vllm_http": true,
+    "default_backend": "vllm_http"
+  },
+  "models": {
+    "qa_generator_model": {
+      "name": "qwen-vllm",
+      "path": "/mnt/data/LLM/lhy/models/Qwen3/Qwen3-235B-A22B",
+      "temperature": 0.7,
+      "max_tokens": 4096,
+      "gpu_memory_utilization": 0.95,
+      "tensor_parallel_size": 8,
+      "max_model_len": 40960
+    },
+    "quality_checker_model": {
+      "name": "qwen-vllm",
+      "temperature": 0.3,
+      "max_tokens": 4096
+    },
+    "local_models": {
+      "default_backend": "vllm_http",
+      "vllm_http": {
+        "base_url": "http://localhost:8000/v1",
+        "model_path": "/mnt/data/LLM/lhy/models/Qwen3/Qwen3-235B-A22B",
+        "api_key": "EMPTY",
+        "model_name": "qwen-vllm",
+        "gpu_memory_utilization": 0.95,
+        "tensor_parallel_size": 4,
+        "max_model_len": 98304,
+        "temperature": 0.6,
+        "repetition_penalty": 1.1,
+        "min_p": 0,
+        "top_p": 0.95,
+        "top_k": 40,
+        "max_tokens": 4096,
+        "stop": ["<|im_end|>", "<|endoftext|>"],
+        "stop_token_ids": [151329, 151336, 151338],
+        "timeout": 300,
+        "max_retries": 5,
+        "retry_delay": 2.0
+      }
+    }
+  },
+  "paths": {
+    "pdf_dir": "data/pdfs",
+    "text_dir": "data/texts",
+    "output_dir": "data/output",
+    "qa_output_dir": "data/qa_results",
+    "pdf_output_dir": "data/qa_results/pdfs",
+    "text_output_dir": "data/qa_results/texts",
+    "temp_dir": "data/temp"
+  },
+  "processing": {
+    "batch_size": 32,
+    "max_concurrent_tasks": 100,
+    "chunk_size": 2000,
+    "chunk_overlap": 200,
+    "max_retries": 3,
+    "retry_delay": 1.0,
+    "enable_text_filtering": true,
+    "filter_references": true,
+    "filter_acknowledgments": true,
+    "min_chinese_ratio": 0.01
+  },
+  "quality_control": {
+    "enabled": true,
+    "min_quality_score": 0.7,
+    "check_indexes": [40, 37, 38],
+    "check_times": 9,
+    "enhanced_quality_check": {
+      "enabled": true,
+      "use_detailed_scoring": true,
+      "quality_threshold": 0.7,
+      "require_reasoning_score": 1.0
+    },
+    "scoring_criteria": {
+      "completeness": {
+        "weight": 0.25,
+        "enabled": true
+      },
+      "complexity": {
+        "weight": 0.25,
+        "enabled": true
+      },
+      "accuracy": {
+        "weight": 0.25,
+        "enabled": true
+      },
+      "reasoning": {
+        "weight": 0.25,
+        "enabled": true
+      }
+    }
+  },
+  "prompts": {
+    "system_prompt": "你是一个乐于助人的半导体显示技术领域的专家。",
+    "use_thinking_template": false,
+    "include_background": true,
+    "max_questions_per_text": 3
+  },
+  "domains": {
+    "supported": ["semiconductor", "optics", "materials", "physics", "chemistry"],
+    "default": "semiconductor",
+    "domain_specific_prompts": {
+      "semiconductor": {
+        "keywords": ["IGZO", "TFT", "OLED", "晶体管", "能带", "载流子"],
+        "focus": "半导体器件和显示技术"
+      },
+      "optics": {
+        "keywords": ["光学", "激光", "光谱", "折射", "衍射", "干涉"],
+        "focus": "光学原理和应用"
+      },
+      "materials": {
+        "keywords": ["材料", "晶体", "薄膜", "纳米", "复合材料", "表征"],
+        "focus": "材料科学和工程"
+      }
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/processing.log",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "performance": {
+    "enable_caching": true,
+    "cache_dir": "cache",
+    "max_cache_size_gb": 10,
+    "enable_profiling": false,
+    "profile_output": "profiles"
+  }
+}
