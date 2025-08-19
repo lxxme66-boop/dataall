@@ -1,0 +1,2416 @@
+{
+  "total_assessed": 57,
+  "quality_distribution": {
+    "high": 22,
+    "medium": 20,
+    "low": 15
+  },
+  "average_numeric_score": 0.6808771929824561,
+  "sft_suitable_count": 22,
+  "sft_suitable_rate": 0.38596491228070173,
+  "detailed_assessments": [
+    {
+      "index": 0,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确迁移率与分辨率/刷新率的定量关系（如驱动电流公式推导）",
+            "未讨论工艺温度对迁移率分布的影响",
+            "未考虑机械应力对柔性器件迁移率退化的影响"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "迁移率上限值偏高（典型IGZO迁移率≤40 cm²·V⁻¹·s⁻¹）",
+            "未区分电子/空穴迁移率差异",
+            "未说明测量条件（如栅极电压偏置状态）"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析界面态密度对有效迁移率的影响",
+            "未提及迁移率温度依赖性（如晶格散射机制）",
+            "未讨论氧空位缺陷对迁移率稳定性的影响"
+          ]
+        },
+        "application_value": {
+          "score": "high",
+          "issues": []
+        }
+      },
+      "improvement_suggestions": [
+        "补充迁移率与显示性能的定量关系模型（如RC延迟公式）",
+        "增加工艺窗口对迁移率分布的影响分析",
+        "引用JEITA ED-2531A等显示器件测试标准",
+        "讨论低温多晶氧化物技术（LTPO）对迁移率的优化路径"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 1,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未明确分析机械弯曲对迁移率退化的影响机制",
+            "未提及MOTFT材料的氧空位缺陷对阈值电压漂移的定量影响"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体工艺窗口参数（如沉积温度±5℃控制）",
+            "缺乏良率提升的量化数据支撑（如缺陷密度降低X%）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充机械应力与迁移率退化的物理模型（如压电效应）",
+        "增加阈值电压稳定性测试的ASTM标准引用",
+        "提供典型工艺参数公差范围（如栅氧厚度±2nm）",
+        "量化高迁移率对像素充电时间的改善幅度（如从50μs降至10μs）"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 2,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未完整展开MOTFT材料特性（如迁移率、氧空位缺陷、界面态密度）与低温工艺的因果关系",
+            "缺乏与OTFT/a-Si TFT的系统性对比分析框架",
+            "未讨论可能的工艺失效模式（如热应力导致的柔性基板形变）"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未明确引用MOTFT关键参数（如典型迁移率范围10-50 cm²/V·s）",
+            "未标注低温工艺温度阈值（<300℃）的行业标准依据（SEMI C10-0703）"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及MOTFT的缺陷态调控机制（如氢掺杂对氧空位的钝化作用）",
+            "未比较不同TFT技术的机械稳定性差异（如弯曲半径<1mm时的性能退化机理）"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化低温工艺的工程效益（如基板成本降低30%-40%）",
+            "未提出具体的良率提升路径（如原子层沉积（ALD）工艺优化方案）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充MOTFT载流子迁移率与晶格有序度的物理关联分析",
+        "增加与OTFT（如P-型有机半导体迁移率限制）的能带结构对比",
+        "引用SID 2023年柔性显示技术路线图中的工艺温度规范",
+        "讨论低温退火对MOTFT阈值电压稳定性的影响机制"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 3,
+      "overall_quality": "low",
+      "numeric_score": 0.42,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "步骤完整性不足：未完整展开材料组分调控与工艺优化的具体实施路径",
+            "因果连贯性缺失：未阐明组分变化如何影响晶体结构与载流子迁移率的物理机制",
+            "技术参数模糊：未明确IGZO中Ga/In/Zn比例调整范围及其对迁移率的具体影响数据",
+            "缺乏错误回溯：未讨论柔性弯曲时界面态密度增加导致性能退化的补偿机制"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "材料特性描述不完整：未提及IGZO中Ga含量对机械强度的增强作用及对迁移率的抑制效应",
+            "制程参数缺失：未说明原子层沉积（ALD）与磁控溅射工艺在柔性适配性上的差异",
+            "未引用SEMI C12-0703标准中关于柔性显示器件弯曲半径的测试规范",
+            "未规避2021年US10998432B2专利中关于梯度掺杂的IGZO结构"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "缺陷机理分析不足：未涉及氧空位浓度与机械应变的耦合失效机制",
+            "技术趋势遗漏：未提及二维材料异质结或自组装纳米结构等前沿方向",
+            "工艺瓶颈识别不充分：未量化讨论柔性基板热预算对结晶工艺的限制"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "工程可行性存疑：未提供具体沉积温度（如<150℃）与退火工艺的匹配方案",
+            "成本优化缺失：未对比溅射与溶液工艺在卷对卷生产中的材料利用率差异",
+            "良率提升路径不明确：未提出通过界面钝化层（如Al₂O₃）降低弯曲诱导漏电流的验证方案"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充IGZO组分调控的三元相图分析，明确Ga含量>30at%对迁移率与杨氏模量的非线性影响",
+        "增加工艺窗口优化数据，如反应溅射中O₂/(Ar+O₂)比例在5-15%范围对薄膜致密性的调控曲线",
+        "引用SID 2022年会论文中关于柔性IGZO TFT在1mm弯曲半径下迁移率保持率>90%的实验验证",
+        "提出梯度掺杂方案规避专利，并通过TCAD仿真验证载流子局域化效应的抑制效果"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 4,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "步骤完整性不足：未明确说明材料体系设计的具体实现路径（如In-Ga-Zn-O体系的氧空位调控阈值）",
+            "因果连贯性待加强：未建立氧空位浓度与迁移率提升的定量关系模型",
+            "技术参数矛盾：IGZO体系常规工艺温度需300℃以上，与<150℃目标存在冲突"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "未引用SEMI C12-0703对氧化物半导体薄膜电阻率的测试标准",
+            "未区分柔性基板（如PI）的热变形温度（Tg>250℃）与工艺温度的兼容性边界"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析机械弯曲导致的晶格畸变对迁移率的退化机理",
+            "未提及2023年Nature Electronics报道的自修复氧化物界面技术"
+          ]
+        },
+        "application_value": {
+          "score": "high",
+          "issues": []
+        }
+      },
+      "improvement_suggestions": [
+        "补充In-Sn-Zn-O体系与低温原子层沉积（ALD）工艺的协同优化方案",
+        "增加XPS深度剖析氧空位分布与Hall迁移率的关联性分析",
+        "引用SID 2022年柔性显示技术路线图中的工艺温度预算标准"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 5,
+      "overall_quality": "medium",
+      "numeric_score": 0.78,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确界面工程策略的实施步骤（如钝化层沉积工艺参数）",
+            "未讨论不同策略的协同作用机制",
+            "未量化水氧渗透率与阈值电压漂移的定量关系"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI标准中关于OTFT环境测试的规范（如SEMI D63-0703）"
+          ]
+        },
+        "domain_depth": {
+          "score": "high",
+          "issues": []
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体工艺参数（如ALD沉积温度≤150℃）",
+            "未评估不同策略的成本增加幅度（如SAMs材料成本）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充界面修饰层厚度与器件稳定性的实验数据关联性分析",
+        "增加对近期界面工程专利（如US20220102567A1）的规避说明",
+        "量化不同钝化方案对湿热测试（85℃/85%RH）后迁移率保持率的影响"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 6,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确材料特性与弯曲测试失效机制的关联性",
+            "器件结构设计参数（如沟道长度/宽度）对机械稳定性的影响未量化",
+            "缺乏工艺温度与材料热膨胀系数匹配性的因果分析"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI D63-0301关于柔性器件弯曲测试的标准方法",
+            "有机半导体迁移率范围（0.1-10 cm²/V·s）未与具体应用场景关联"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析界面应力集中导致的OTFT阈值电压漂移机理",
+            "缺少对最新自修复聚合物介电层技术的引用（如Nature Materials 2022）"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供良率提升的具体验证数据（如弯曲测试后的器件性能退化率）",
+            "成本优化分析缺失（如有机半导体材料与LTPS工艺的成本对比）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充材料弹性模量与曲率半径的力学计算模型",
+        "增加器件结构参数（如栅极堆叠厚度）对机械应变的敏感性分析",
+        "引用SID显示应用标准（如SID-IST-1001）进行规范性验证",
+        "讨论有机/无机杂化封装技术对长期可靠性的提升作用"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 7,
+      "overall_quality": "low",
+      "numeric_score": 0.35,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "答案仅提供标题，未展开分析载流子传输机制与材料特性的关联性",
+            "未建立迁移率差异与显示性能参数之间的因果关系链",
+            "缺乏工艺参数（如迁移率数值、阈值电压偏移量）的定量分析"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未明确OTFT与a-Si TFT迁移率典型值（如OTFT>1.0 vs a-Si<0.5 cm²/V·s）",
+            "未引用SEMI D6311关于柔性显示器电学测试标准",
+            "未提及有机半导体界面态密度（Dit）对迁移率的影响"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析陷阱态密度对亚阈值摆幅（SS）的影响机理",
+            "未涉及有机材料的晶界散射与非晶硅的缺陷态密度差异",
+            "未讨论低温多晶硅（LTPS）作为对比技术的迁移率优势"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化迁移率差异对帧率（如EPD典型1-10 Hz）的影响",
+            "未提供工艺改进路径（如OTFT的界面工程或a-Si的氢化处理）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充载流子迁移率与器件跨导（gm）的数学关系推导",
+        "对比分析两种材料的温度稳定性（如OTFT的热膨胀系数匹配问题）",
+        "引用Nature Materials 2022关于有机半导体晶格畸变的研究数据",
+        "增加工艺集成度分析（如OTFT与OLED/EPD的兼容性）"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 8,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "答案未完整展开U型双TFT非对称结构的电容耦合关系变化细节",
+            "未明确电场分布优化与亚阈值摆幅改善的定量关联"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未对比传统对称结构的载流子分布差异",
+            "缺乏界面态密度对亚阈值摆幅影响的机理分析"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体工艺兼容性验证数据",
+            "成本优化分析缺失"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充非对称结构中栅极堆叠层电容分压比的计算模型",
+        "增加与LDD结构TFT的横向电场分布对比仿真数据",
+        "引用IEEE EDL或SID相关文献佐证参数优化范围",
+        "讨论结构创新对光刻工艺窗口的影响及补偿方案"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 9,
+      "overall_quality": "high",
+      "numeric_score": 0.88,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未深入分析缺陷机理（如界面态对迁移率的影响）",
+            "未提及最新技术趋势（如金属氧化物TFT与有机TFT的异质集成）"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化成本优化效益",
+            "缺乏具体良率提升验证数据"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充对界面态密度（Dit）和接触电阻（Rc）对迁移率影响的机理分析",
+        "增加对SEMI D6-1102（半导体器件可靠性测试标准）的引用",
+        "提供具体工艺温度范围（如低温多晶硅工艺<600℃）和弯曲半径量化指标（如<2mm）",
+        "建议对比单栅/双栅结构在机械应变下的阈值电压漂移差异"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 10,
+      "overall_quality": "low",
+      "numeric_score": 0.25,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "答案内容缺失，未提供具体解决方案",
+            "未展示问题分析过程",
+            "未说明技术方案选择依据"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未涉及具体材料参数",
+            "未引用工艺标准",
+            "未说明技术方案专利状态"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析器件失效机理",
+            "未讨论技术发展趋势",
+            "未识别工艺瓶颈"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提供可实施技术路线",
+            "未进行成本效益分析",
+            "未量化良率改善预期"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充完整的解决方案内容",
+        "增加技术参数的具体数值范围",
+        "引用相关国际标准（如SEMI C12）",
+        "说明方案的专利规避设计",
+        "提供实验验证数据支撑"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 11,
+      "overall_quality": "low",
+      "numeric_score": 0.35,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "存在基础物理原理错误：电极间距缩小30%会导致寄生电容增加而非降低，与结论矛盾",
+            "未解释背沟道刻蚀与寄生电容的关联机制",
+            "缺乏工艺参数与电容变化的定量关系分析"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "违反电容公式C=εA/d的基本原理（d减小导致C增大）",
+            "未提及关键材料参数（如介电常数）对电容的影响",
+            "未引用SEMI C1021或类似标准验证工艺规范"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析界面态密度或缺陷态对寄生电容的贡献",
+            "未比较传统刻蚀与自对准工艺的工艺窗口差异"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供电极间距公差控制的工程实现方案",
+            "缺乏良率提升数据支撑结论有效性"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "修正电容计算公式中的物理关系，建议调整为增大电极间距或降低介电层厚度",
+        "补充背沟道刻蚀工艺对寄生电容分布的具体影响机制",
+        "引用SEMI C1021标准验证刻蚀工艺参数范围",
+        "增加工艺窗口分析和缺陷密度检测数据"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 12,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未完整覆盖问题要求的三个维度（仅分析迁移率，缺失寄生电容和工艺集成度）",
+            "缺乏对ESL结构界面散射机理的定量解释",
+            "未建立刻蚀工艺参数与性能差异的直接关联"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "迁移率数值需补充测试条件（如电场强度、温度）",
+            "未说明IGZO材料组分（典型InGaZnO4）对迁移率的影响"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及背沟道刻蚀导致的表面态密度变化（典型值1e11-1e12 eV⁻¹cm⁻²）",
+            "缺乏对寄生电容与栅极结构几何尺寸的关联分析"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化工艺集成度差异（如光罩层数减少量）",
+            "未提供良率提升的具体验证数据"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充寄生电容对比分析（建议引用C=εA/d公式说明结构差异影响）",
+        "增加工艺集成度评估维度（如关键尺寸控制、光刻次数对比）",
+        "引用SEMIS37标准中的电学测试方法作为分析依据",
+        "补充刻蚀工艺参数窗口（如干法刻蚀的离子能量范围）"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 13,
+      "overall_quality": "high",
+      "numeric_score": 0.88,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未明确引用SEMI标准中关于IGZO薄膜缺陷密度的测试方法（如SEMI C104）",
+            "未说明亚阈值斜率0.50 V/decade与SID显示器件可靠性标准的符合性"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未提及近期Nature Electronics报道的界面态密度控制阈值（<5×10¹⁰ cm⁻²）",
+            "未分析原子层沉积（ALD）保护层与PECVD工艺的竞争性技术路线"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化工艺步骤减少带来的成本效益（如光罩数量从5步减至3步）",
+            "未提供良率提升的具体验证数据（如批次良率从75%提升至89%）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充SEMI C104标准对界面态密度的测试规范说明",
+        "引用2023年SID显示年鉴中关于背沟道刻蚀工艺的量产良率数据",
+        "增加与刻蚀阻挡层工艺在设备兼容性方面的对比分析",
+        "提供工艺成本优化的量化模型（如沉积时间与膜厚关系曲线）"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 14,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未明确引用SEMI标准中关于湿热测试条件（如85°C/85% RH）的行业规范",
+            "未提及近期专利US20220102456A1关于梯度密度保护层的技术方案"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未关联2023年Nature Electronics关于光-偏压应力协同效应的研究进展",
+            "未讨论原子层沉积（ALD）保护层的工艺窗口限制"
+          ]
+        },
+        "application_value": {
+          "score": "high",
+          "issues": []
+        }
+      },
+      "improvement_suggestions": [
+        "补充引用SEMI L47-0303关于显示器件环境可靠性的测试标准",
+        "增加与2022年SID最佳论文中水汽渗透模型的对比分析",
+        "量化保护层沉积速率（如Å/cycle）对量产效率的影响"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 15,
+      "overall_quality": "low",
+      "numeric_score": 0.23,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "完全缺失推理步骤",
+            "未建立温度-功率-再结晶动力学的关联模型",
+            "未分析界面态密度的物理形成机制"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未引用铜栅极工艺的典型温度范围（通常150-300℃）",
+            "未说明溅射功率对晶粒尺寸的定量影响（如300W对应沉积速率~5nm/min）",
+            "未涉及界面态密度标准测试方法（如CV法）"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未讨论再结晶激活能（铜约0.8-1.2eV）",
+            "未涉及晶界扩散系数与温度的Arrhenius关系",
+            "未分析等离子体损伤与功率的非线性关系"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提供工艺窗口优化建议",
+            "未量化界面态密度改善目标（如从1e11→1e10 eV⁻¹cm⁻²）",
+            "未提及工业应用中的设备参数限制"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "建立温度-功率-晶粒尺寸的JMAK再结晶模型",
+        "引用IEEE EDL 2021关于铜栅极界面工程的研究",
+        "结合XRD半高宽数据说明结晶度改善",
+        "分析等离子体轰击能量与界面态密度的定量关系"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 16,
+      "overall_quality": "low",
+      "numeric_score": 0.42,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "未展开具体优化参数（如沉积温度、气体流量比、膜厚控制等）",
+            "缺乏工艺参数与材料特性（如IGZO氧空位浓度、保护层致密性）的关联分析",
+            "未说明阈值电压漂移抑制的物理机制（如界面态钝化、水汽阻隔效应）"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未引用SEMI C12-0703标准中关于TFT稳定性测试规范",
+            "未提及保护层材料（如SiOx/SiNx叠层）的介电常数与应力特性",
+            "未验证工艺参数是否规避三星/KOE近期相关专利（如US20220102567A1）"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析背沟道刻蚀导致的表面态密度变化（Dit）与Vth漂移的定量关系",
+            "未讨论原子层沉积（ALD）与PECVD工艺在界面控制上的技术差异",
+            "未识别保护层沉积温度对IGZO微晶相变的潜在影响"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提供工艺窗口（DOE）实验数据支撑可行性",
+            "未量化成本增加（如沉积速率降低带来的产能损失）",
+            "未提出良率提升的验证方案（如偏压温度测试BTI稳定性）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充保护层沉积参数矩阵（如SiH4/N2O流量比0.3-0.5、沉积温度250-300℃）",
+        "增加界面态密度（Dit）与阈值电压漂移量（ΔVth）的Arrhenius关系拟合数据",
+        "引用SID 2023会议中关于IGZO TFT水汽老化机理的最新研究成果",
+        "对比分析SiOx单层与SiOx/SiNx叠层保护结构的湿热稳定性差异"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 17,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "步骤完整性不足：未明确说明具体工艺集成创新步骤",
+            "因果连贯性待加强：未建立尺寸缩小与参数平衡的定量关系模型",
+            "技术参数合理性存疑：未给出关键工艺参数（如刻蚀速率、沉积温度）的控制范围"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "材料特性描述缺失：未说明IGZO材料组分（In:Ga:Zn比例）对迁移率的影响",
+            "制程参数匹配性不足：未提及光刻分辨率提升的具体技术手段",
+            "标准引用缺失：未引用SEMI C12-0703关于TFT器件可靠性的测试标准"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "缺陷机理分析不充分：未讨论尺寸缩小带来的短沟道效应及抑制方案",
+            "技术趋势覆盖不足：未涉及原子层沉积（ALD）等新型薄膜工艺的应用潜力",
+            "工艺瓶颈识别不明确：未量化关键工艺限制（如临界尺寸控制精度要求）"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "工程可行性待验证：未提供工艺集成方案的良率验证数据",
+            "成本优化未量化：未评估新型工艺设备投入与量产成本的关系",
+            "良率提升路径模糊：未建立尺寸缩小与缺陷密度的定量改善模型"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充具体工艺集成方案（如自对准刻蚀技术、新型栅介质沉积工艺）",
+        "增加关键工艺参数控制范围（如反应离子刻蚀的气体配比、基板温度等）",
+        "引用SEMI C12-0703和SID信息显示手册相关标准",
+        "分析尺寸缩小带来的短沟道效应及抑制方案（如LDD结构设计）",
+        "提供良率验证数据及成本效益分析模型"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 18,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "high",
+          "issues": []
+        },
+        "application_value": {
+          "score": "high",
+          "issues": []
+        }
+      },
+      "improvement_suggestions": [
+        "建议补充对SEMI S25标准中湿度测试条件的引用以增强标准符合性",
+        "可增加对近期US20220102567A1专利中类似工艺的对比分析"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 19,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "high",
+          "issues": []
+        },
+        "application_value": {
+          "score": "high",
+          "issues": []
+        }
+      },
+      "improvement_suggestions": [
+        "补充水汽渗透率与ΔVth的定量数学模型（如Arrhenius方程关联）",
+        "增加不同致密化工艺参数（如溅射功率、退火温度梯度）的对比实验数据",
+        "引用SEMI C66-0304关于湿热测试标准与器件可靠性的关联分析"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 20,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未明确提及最新缺陷表征技术如KPFM或TCAD仿真验证"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化缺陷态密度与Vth漂移量的定量关系模型"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充缺陷态密度与载流子迁移率的定量关系公式（如Shockley-Read-Hall模型）",
+        "增加对界面态密度(Dit)与亚阈值摆幅(SS)的数学关系推导",
+        "引用SEMI标准中关于TFT稳定性测试的规范条款"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 21,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "high",
+          "issues": []
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "缺乏具体工艺参数的量化描述（如沉积速率、退火温度等）",
+            "未明确说明缺陷态密度降低的具体表征数据（如XPS或UPS测试结果）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充缺陷态密度变化的定量分析数据（如通过XPS测得的氧空位浓度变化）",
+        "增加对保护层材料折射率、致密度等关键参数的工艺窗口描述",
+        "结合TCAD仿真说明缺陷态捕获电子对载流子分布的具体影响机制"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 22,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确致密化工艺的具体参数（如溅射功率、沉积温度、退火条件等）",
+            "未说明针孔缺陷检测方法（如AFM/TEM表征或水汽透过率测试）",
+            "未建立薄膜致密性与水汽渗透率的定量关系模型",
+            "未讨论工艺窗口优化过程（如过度致密化可能导致的应力开裂问题）"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "未引用SEMI C66-0304（半导体薄膜密度测试标准）",
+            "未说明SiOx薄膜折射率与致密性的对应关系（通常>1.46@633nm）",
+            "未提及与近期专利US20220102456A1的工艺差异性对比"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析水汽渗透导致的缺陷态生成机制（如-OH基团形成）",
+            "未讨论背沟道刻蚀工艺与保护层沉积的协同优化空间",
+            "未涉及TFT器件稳定性测试标准（如IEC 61290-1-1）"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供工艺成本量化数据（如沉积速率降低带来的产能影响）",
+            "未给出良率提升的具体验证方案（如HAST测试条件和失效周期）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充工艺参数窗口优化过程及缺陷密度检测数据",
+        "增加薄膜密度与水汽透过率的Arrhenius关系分析",
+        "引用SEMI C66-0304和SID显示器件可靠性测试标准",
+        "对比分析US20220102456A1专利的技术差异",
+        "提供HAST测试（85℃/85%RH）下的器件寿命验证数据"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 23,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未提及最新技术趋势（如柔性显示中的IGZO改进方案）",
+            "未分析工艺瓶颈（如铟资源稀缺性）"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化成本优化数据",
+            "未提供具体良率提升验证方案"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充引用SEMI C12-0703标准中关于IGZO材料规范",
+        "增加对2020年后IGZO相关专利（如US10780456B2）的技术规避说明",
+        "量化不同配比方案的量产良率对比数据"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 24,
+      "overall_quality": "high",
+      "numeric_score": 0.82,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "未明确引用SEMI/SID标准支持氧空位形成能（ΔH_f,Ov=3.2 eV）和氧扩散势垒（E_a,O）的数值依据",
+            "未提及近期IGZO材料相关专利（如US20220102456A1）的技术规避方案"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析晶界缺陷导致载流子浓度波动的具体缺陷态密度（Dit）变化",
+            "未涉及原子层沉积（ALD）等新型工艺对配比控制的影响"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供In:Ga:Zn=1:1:1配比的具体量产验证数据（如良率提升幅度）",
+            "未量化迁移率（>20 cm²/V·s）与阈值电压漂移（<0.5 V/hrs）的工艺窗口"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充ΔH_f,Ov和E_a,O数值的文献来源或实验验证数据",
+        "增加对新型沉积工艺（如溅射靶材微观结构控制技术）的适配性分析",
+        "提供原子级配比设计的热力学模拟（如CALPHAD方法）支持",
+        "引用最新显示器件可靠性标准（如SID-IST-2-2021）进行阈值电压漂移评估"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 25,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "步骤完整性不足：未明确区分载流子迁移率提升的三个层级（轨道重叠、氧空位调控、晶格畸变抑制）",
+            "因果连贯性待加强：未建立In³+离子半径（80pm）与晶格失配能垒降低的定量关系",
+            "技术参数缺失：未引用典型In含量阈值（如>60at%触发晶化）及迁移率饱和点（~40cm²/V·s）",
+            "错误回溯机制缺失：未讨论实际器件中In富集导致的相分离缺陷密度（>10^9/cm²）"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "材料特性描述不完整：未区分β-In₂O₃（立方相）与α-In₂O₃（六方相）对迁移率的差异影响",
+            "制程参数关联缺失：未提及典型溅射温度窗口（200-300℃）对非晶结构的维持作用",
+            "标准引用不足：未引用SEMI C12-0703中关于IGZO靶材纯度（>99.99%）的规范",
+            "专利规避存疑：未排除日本JX日矿金属2018年关于梯度掺In靶材的专利（JP2018172765A）"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "缺陷机理分析浅层：未涉及In富集导致的氧空位形成能降低（从3.2eV降至2.1eV）",
+            "技术趋势覆盖不足：未提及2023年Nature Electronics报道的亚稳态非晶IGZO设计",
+            "工艺瓶颈识别不全：未量化In含量对溅射产率的影响（每增加10at%导致沉积速率下降15%）"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "工程可行性存疑：未提供In组分梯度分布的工程实现方案（如多靶共溅射参数）",
+            "成本优化缺失：未量化高In含量导致的靶材成本上升（In₂O₃单价为Ga₂O₃的8倍）",
+            "良率提升路径模糊：未建立In偏析与器件阈值电压漂移（>0.5V/月）的定量关联"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充In³+的5s轨道与O 2p轨道杂化增强载流子迁移率的能带计算数据",
+        "增加晶化倾向的Arrhenius方程拟合结果（如晶化温度与In含量的线性关系）",
+        "引用SID 2022年显示器件会议中关于IGZO非晶稳定性的最新相图研究",
+        "对比2019-2023年专利文献中In梯度分布技术的演进路径"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 26,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": [
+            "未明确说明200℃阈值的实验依据（如相变动力学曲线或晶化激活能数据）",
+            "未讨论基板材料（如玻璃/PI）对热预算的限制影响"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "In³⁺/Ga³⁺扩散速率差异未量化（如阿伦尼乌斯方程参数）",
+            "未区分N型与P型TFT的晶化敏感性差异"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未引用2023年关于IGZO晶化机制的最新研究（如原位XRD分析）",
+            "未提及低温多晶硅（LTPS）与IGZO的工艺兼容性挑战"
+          ]
+        },
+        "application_value": {
+          "score": "high",
+          "issues": [
+            "未提供具体良率数据（如温度>220℃时器件失效概率提升幅度）",
+            "未建议实时监控方案（如基板温度传感器的布置密度）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充晶化动力学模型参数（如Johnson-Mehl-Avrami指数）",
+        "增加基板材料热膨胀系数对界面应力的影响分析",
+        "引用SID 2023关于IGZO微结构表征的最新研究成果",
+        "量化不同温度区间对器件寿命（HTGB/DCS测试）的具体影响"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 27,
+      "overall_quality": "high",
+      "numeric_score": 0.88,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": [
+            "未明确提及双栅结构对光致漏电流的抑制作用",
+            "未讨论底栅材料热膨胀系数匹配问题"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI C12-0703对界面态密度的测试标准",
+            "未说明阈值电压漂移速率测试条件（如偏压温度应力条件）"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及双栅结构对机械应力的响应特性",
+            "未比较与单栅结构在自对准工艺中的差异"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化双栅结构对设备投资成本的影响",
+            "未提供具体工艺窗口（如栅介质厚度匹配范围）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充双栅结构对光敏性改善的机理分析",
+        "增加与SID 11.3标准对阈值电压稳定性的对标数据",
+        "提供双栅TFT在AMOLED驱动电路中的具体应用案例"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 28,
+      "overall_quality": "low",
+      "numeric_score": 0.32,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "未展开具体优化步骤（如元素掺杂比例、退火条件等）",
+            "缺乏元素作用机理分析（如In/Ga/Zn对迁移率/稳定性的协同影响）",
+            "未说明缺陷类型（如氧空位、金属团簇）与控制方法的关联性",
+            "未建立材料配比-缺陷密度-器件性能的因果关系链"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未明确关键参数范围（如In含量阈值、最佳O₂流量比）",
+            "未引用主流工艺标准（如SEMATECH氧化物半导体工艺规范）",
+            "未区分不同器件结构（如底栅/顶栅）对配比优化的影响",
+            "未提及近期专利规避方案（如2020年后高迁移率氧化物专利布局）"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析根本缺陷机理（如金属-氧键共价性/离子性平衡）",
+            "未讨论技术趋势（如柔性显示对配比方案的新要求）",
+            "未识别工艺瓶颈（如高In含量导致的结晶倾向与非晶均匀性矛盾）"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提供可量产的工艺窗口（如溅射功率/压强参数范围）",
+            "未量化成本效益（如稀有金属In的用量优化效果）",
+            "未给出良率提升的具体验证方案（如BT应力测试数据）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充元素作用机理分析（如Ga³+抑制氧空位形成能计算）",
+        "增加缺陷控制技术细节（如等离子体处理/O₂退火工艺）",
+        "引用典型工艺参数（如In:Ga:Zn=1:1:1时迁移率>30cm²/V·s）",
+        "加入稳定性测试数据（如偏压温度应力下的阈值电压漂移）"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 29,
+      "overall_quality": "low",
+      "numeric_score": 0.23,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "完全缺失推理步骤，未分析烧结温度/时间/气氛对致密度的影响",
+            "未讨论相变动力学控制机制（如晶粒生长抑制）",
+            "未建立工艺参数与材料性能（密度/均匀性）的因果关系"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未引用IGZO靶材制备的行业标准（如SEMI C38-0301）",
+            "未提及关键工艺参数范围（如1400-1600℃烧结温度窗口）",
+            "未说明成分均匀性的控制手段（如粉末粒径分布<1μm）"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析氧空位扩散导致成分偏析的缺陷机理",
+            "未涉及亚稳相（如InGaO₃(ZnO)₂）的形成控制",
+            "未讨论热等静压（HIP）等先进致密化技术"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提供可实施的工艺窗口（如1550℃±10℃保温2h）",
+            "未量化致密度检测方法（如阿基米德法/氦气比重计）",
+            "未提出相组成表征方案（如XRD/Rietveld精修）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充烧结温度曲线设计（如3阶段升温制度）",
+        "说明气氛控制对氧空位浓度的影响机制",
+        "引用日本出光兴产专利JP2012153367A的工艺参数",
+        "增加EBSD表征晶粒取向均匀性的检测要求"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 30,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确烧结温度阈值区间（如1100-1450℃）与相变动力学关系",
+            "缺乏配比-温度协同效应的定量模型描述",
+            "未讨论过烧结/欠烧结导致的杂相生成机制"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI C66-0703关于氧化物靶材烧结标准",
+            "未提及专利US20200152456A1的工艺规避点"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析ZnO偏析导致的载流子浓度波动机理",
+            "未涉及原子层沉积（ALD）等新型靶材制备技术对比"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供烧结温度-密度-孔隙率的量化关系曲线",
+            "未建立工艺窗口（DOE）与器件迁移率的关联模型"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充不同In/Ga/Zn摩尔比（如1:1:1 vs 1:1:2）的相图分析",
+        "增加烧结气氛（O₂/N₂比例）对氧空位浓度的影响机制",
+        "引用SID 2022年会论文关于IGZO靶材微波烧结新技术"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 31,
+      "overall_quality": "low",
+      "numeric_score": 0.15,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "完全缺失推理步骤",
+            "未建立氢气退火与氧空位修复的因果关系",
+            "未涉及氢原子扩散、缺陷钝化等关键物理机制",
+            "未考虑氢气浓度、退火温度等工艺参数影响"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未描述氢在氧化物半导体中的物性行为",
+            "未引用氢退火优化TFT性能的行业标准（如SEMI C1021）",
+            "未涉及氢相关缺陷态密度变化等核心参数",
+            "未规避近期氢退火工艺相关专利（如US20210126056A1）"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析氧空位导致阈值电压漂移的根本机理",
+            "未讨论氢退火与等离子体处理的技术差异",
+            "未识别氢脆效应等工艺瓶颈"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提供退火温度/时间/压力等量产参数窗口",
+            "未量化氢退火对迁移率提升或亚阈值摆幅改善的数据",
+            "未提出缺陷密度监控方案"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充氢原子扩散方程与氧空位反应动力学模型",
+        "引用Nature Materials 2020关于氢在IGZO中钝化机制的研究",
+        "对比不同退火气氛（H2/N2/O2）对缺陷态密度的影响数据",
+        "讨论氢退火与原子层沉积（ALD）工艺的兼容性"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 32,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确解释1400℃超高温与InGaZnO₄单相形成之间的热力学驱动力",
+            "第一性原理计算部分缺乏具体计算方法（如DFT泛函选择、赝势类型）和关键参数（如形成能、态密度）的说明",
+            "未建立烧结温度-物相演化-缺陷态密度之间的定量关联模型"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI C12-0703关于氧化物靶材烧结的工艺标准",
+            "未提及近期专利US20220102234A1对IGZO靶材制备的工艺改进"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析ZnO富集相在晶界处的偏析机制",
+            "未讨论烧结温度与氧空位浓度的定量关系",
+            "未涉及原子层沉积（ALD）等新型制备技术的对比"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供烧结温度降低的工程实施方案（如纳米添加剂、微波烧结）",
+            "未量化高温烧结对靶材致密度（如相对密度>95%）与溅射成膜均匀性的具体影响",
+            "未提出可验证的良率提升指标（如靶材批次一致性标准差<2%）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充第一性原理计算中形成能计算公式和晶格畸变分析",
+        "增加与SEMI C12-0703标准中烧结曲线的对比数据",
+        "引入近期专利US20220102234A1的梯度烧结工艺对比实验",
+        "建立烧结温度-靶材密度-薄膜迁移率的三维响应面模型"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 33,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "high",
+          "issues": []
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未明确量化表面粗糙度与氧缺陷浓度的定量关系模型",
+            "缺乏具体工艺窗口参数（如退火温度/时间范围）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充氧空位浓度与表面粗糙度的定量关系式（如Arrhenius方程关联）",
+        "增加退火工艺参数窗口的实验验证数据",
+        "引用SEMI C66-0703标准中关于氧化物半导体退火工艺规范"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 34,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "步骤完整性不足：未明确说明成分设计的具体参数（如元素掺杂比例）与烧结工艺（如升温速率、保温时间）的协同机制",
+            "因果连贯性待加强：未建立热力学参数（如相变温度、吉布斯自由能）与动力学参数（如扩散速率、晶界迁移）的定量关联模型",
+            "技术参数合理性存疑：未提及典型烧结温度范围（如1300-1500℃）与靶材密度（如>95%理论密度）的行业基准值"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "未引用SEMI C66-0703标准中关于氧化物半导体靶材纯度（>99.99%）和密度（>95%）的技术规范",
+            "未区分不同工艺路线（如放电等离子烧结vs常压烧结）对晶粒尺寸分布的影响差异",
+            "未讨论ZnO富集相与InGaZnO4主相的热力学竞争关系"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及缺陷态控制（如氧空位浓度与载流子迁移率的关系）",
+            "未提及原子层沉积（ALD）等新型工艺对成分梯度控制的优势",
+            "未分析烧结助剂（如SiO2、Al2O3）对晶界钉扎效应的影响机制"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体的工艺窗口优化方案（如烧结温度-时间-气氛三维参数矩阵）",
+            "未量化成本优化指标（如烧结能耗降低百分比或成品率提升幅度）",
+            "未提出可验证的表征方法（如EBSD分析晶粒取向或XPS检测化学态变化）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充In-Ga-Zn-O体系相图分析与CALPHAD热力学模拟方法",
+        "增加烧结动力学方程（如JMAK模型）对晶粒生长的定量描述",
+        "引入SEM/EBSD联用技术分析微观结构演化",
+        "对比HIP（热等静压）与传统烧结的致密化效率差异",
+        "讨论纳米析出相对主相纯度的钉扎效应"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 35,
+      "overall_quality": "low",
+      "numeric_score": 0.32,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "未提供具体解决方案内容，仅标注'基于论文提供的多物理场耦合方案'但无实质分析",
+            "缺乏工艺参数关联性分析（如温度梯度/应力分布/表面扩散系数的耦合关系）",
+            "未建立退火工艺-表面形貌-电学性能的定量模型"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未明确材料体系（如IGZO/IZO/ZnO基体系）导致参数适配性存疑",
+            "未引用SEMI C6-0703退火工艺规范或SID显示器件材料标准",
+            "未规避2020年后新型退火技术专利（如US20200123456A1激光辅助退火）"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析表面粗糙度恶化根本机理（如氧空位迁移/晶界滑移/热应力集中）",
+            "未涉及原子层沉积（ALD）等替代工艺的最新技术进展",
+            "未识别退火温度窗口与TFT器件热预算的工艺瓶颈"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提供可量产的设备改造方案（如多腔室退火炉压力梯度控制）",
+            "缺乏成本量化分析（如退火时间缩短与良率提升的经济性平衡）",
+            "未提出表面粗糙度在线监测方案（如原位椭偏仪或AFM量化指标）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充多物理场耦合的具体参数（如热-力-电场耦合系数矩阵）",
+        "增加表面粗糙度与载流子迁移率的定量关系模型",
+        "引用近三年IEEE EDL相关文献验证方案可行性",
+        "提出分阶段退火工艺（预退火/主退火/快速冷却）的具体温控曲线",
+        "包含表面能测试数据（如接触角测量）作为工艺优化依据"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 36,
+      "overall_quality": "high",
+      "numeric_score": 0.88,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": [
+            "未明确说明管间滑移与迁移率保持的定量关系",
+            "未讨论界面应力分布的仿真验证方法"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI D63-0301关于柔性器件测试标准",
+            "未说明Al₂O₃介电层厚度与褶皱尺度的工艺窗口"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析碳纳米管网络密度对接触电阻的影响",
+            "未提及2023年Nature Electronics报道的类似结构失效机制"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体良率提升数据（如对比传统结构）",
+            "未量化材料成本增加幅度（如原子层沉积Al₂O₃的工艺成本）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充界面应力分布的有限元仿真数据",
+        "引用SEMI标准说明测试方法合规性",
+        "增加与传统结构的性能对比实验数据",
+        "提供原子层沉积工艺的设备兼容性分析"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 37,
+      "overall_quality": "high",
+      "numeric_score": 0.88,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": [
+            "未明确说明褶皱结构的制备工艺参数（如沉积温度、应力释放条件）",
+            "缺乏对界面应力分布的有限元仿真验证描述"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI D63-0301关于柔性器件机械测试的标准",
+            "未说明Al₂O₃介电层的漏电流密度指标"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未讨论热膨胀系数失配对长期可靠性的影响",
+            "未比较不同褶皱形貌（正弦波vs锯齿形）的应力调控效率"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供与传统平面介电层的工艺兼容性分析",
+            "未量化封装工艺对性能保持率的影响"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充原子层沉积（ALD）工艺参数与褶皱形貌控制的关系",
+        "增加界面应力分布的有限元分析结果验证",
+        "引用SEMI E142标准说明粘附能测试方法",
+        "提供不同应变速率下的性能稳定性对比数据"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 38,
+      "overall_quality": "high",
+      "numeric_score": 0.88,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": [
+            "未明确氢键动态重组机制与能量耗散关系",
+            "缺乏载流子迁移率保持与纤维网络尺寸效应的定量关联"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用氢键弹性单元在共轭聚合物中的典型表征数据（如AFM相分离尺度）",
+            "缺少对载流子迁移率0.1-0.4 cm²·V⁻¹·s⁻¹范围的物理限制因素说明"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及应变梯度下分子取向与π-π堆积间距的动态演变",
+            "未讨论界面滑移对长期循环稳定性的影响"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供纤维网络自组装的工艺窗口参数（如退火温度/时间）",
+            "缺乏与传统交联弹性体方案的性能对比数据"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充氢键断裂/重组能垒与机械耗散的定量关系模型",
+        "增加原位XRD表征验证循环过程中晶体结构稳定性",
+        "引入界面剪切应力计算公式说明裂纹抑制机制",
+        "对比不同氢键密度对迁移率保持率的实验数据"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 39,
+      "overall_quality": "high",
+      "numeric_score": 0.88,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": [
+            "未明确说明动态离子重排与界面极化效应的相互作用机制",
+            "缺乏对迁移率保持机理的定量解释"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI D67-0301关于柔性器件电容测试标准",
+            "未提及离子凝胶的电化学稳定性窗口限制"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析双电层压缩效应在机械应变下的演变",
+            "未讨论离子迁移率与载流子迁移率的协同限制"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体工艺窗口参数（如离子凝胶厚度范围）",
+            "未量化成本增加幅度（如材料成本上升百分比）"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充双电层厚度与机械应变的定量关系模型",
+        "增加对离子凝胶-半导体界面态密度的讨论",
+        "引用SID 22.1:2021关于柔性显示器件可靠性标准",
+        "提供典型工艺参数范围（如退火温度/时间）"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 40,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "金属氧化物材料部分存在截断现象，导致材料设计维度不完整",
+            "动态拉伸条件下的缺陷演化机制未建立明确因果链",
+            "未讨论高迁移率与机械稳定性间的权衡关系"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "导电聚合物迁移率数值范围（0.1-0.4 cm²/V·s）与文献报道的高性能聚合物（如DPP类材料）存在偏差",
+            "离子凝胶双电层栅极的比电容数值（＞1 μF/cm²）需补充测试条件说明",
+            "未明确引用SEMI D6-0703标准中关于柔性器件机械测试的规范"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及近期Nature Materials（2023）报道的自修复界面层技术",
+            "缺乏对接触电阻在拉伸条件下的演变机制分析",
+            "未讨论TFT背板工艺与CMOS兼容性的技术瓶颈"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体良率提升数据（如对比实验结果）",
+            "成本优化分析缺失，如碳纳米管提纯工艺的经济性评估",
+            "工程可行性论证缺乏中试产线验证数据支撑"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充金属氧化物材料的应力调制机制及界面态控制方案",
+        "增加动态应变测试的ASTM标准引用及测试条件说明",
+        "引入近期自修复材料专利（如US20220123056A1）的规避设计",
+        "补充不同拉伸方向（单轴/双轴）对迁移率影响的各向异性分析",
+        "提供具体工艺参数窗口（如退火温度与膜层应力的关系曲线）"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 41,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确说明界面应力与微裂纹形成的具体关联机制",
+            "分子自组装技术实施路径缺乏工艺参数关联性描述",
+            "未讨论交联密度与弹性模量的定量关系"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "未引用SEMI D6-0703关于有机半导体薄膜附着力测试标准",
+            "未说明SAM层厚度控制范围（典型值1-3nm）",
+            "未提及近期相关专利US20220123354A1的规避设计"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析晶界滑移对电荷传输的影响机理",
+            "未涉及动态共价键等新型自修复技术",
+            "未讨论印刷电子工艺兼容性问题"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供交联剂用量与良率提升的量化关系",
+            "未评估卷对卷工艺实施成本",
+            "未给出具体工艺窗口验证数据"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充界面应力计算模型（如Stoney公式）的应用说明",
+        "增加分子自组装过程中的溶剂极性控制参数",
+        "引用SID 2023显示周最新研究成果作为技术趋势支撑",
+        "提供交联密度与迁移率保持率的实验验证数据"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 42,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确阐述参数间的耦合关系及优化优先级",
+            "缺乏对溅射工艺参数（如基板温度、溅射功率、O₂/Ar比例）的具体影响机制分析",
+            "未提及缺陷密度控制与应力补偿方案"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI C12-0703标准中关于a-IGZO薄膜均匀性要求",
+            "缺少对In/Ga/Zn原子比调节范围的行业标准说明"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析氧空位缺陷对迁移率退化的微观机理",
+            "未涉及原子层沉积（ALD）等替代工艺的对比分析"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体的良率提升数据（如ΔVth偏移量控制指标）",
+            "缺乏对卷对卷制造场景的工艺窗口量化描述"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充溅射功率密度（W/cm²）与载流子迁移率的非线性关系模型",
+        "增加XPS深度剖析对薄膜化学计量比的监控方案",
+        "引入有限元模拟预测薄膜应力分布的验证数据",
+        "对比说明反应溅射与直流溅射的工艺窗口差异"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 43,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未完整分析厚度控制的多物理场耦合效应（如热应力/机械应力协同作用）",
+            "未建立厚度与界面态密度的量化关系模型",
+            "未讨论过薄导致的量子限域效应负面影响"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "未明确具体材料体系（如a-IGZO/IZO等）对应的厚度阈值差异",
+            "未引用SEMI C12-0703中关于柔性器件机械应力测试标准",
+            "未区分静态弯曲与动态弯折的性能退化机制差异"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及晶粒尺寸与薄膜厚度的关联性分析",
+            "未讨论氧空位迁移在弯曲条件下的加速效应",
+            "未对比LTPS/OLED器件的厚度设计差异"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体的良率提升数据（如厚度公差±5nm对应的性能波动范围）",
+            "未量化弯曲半径（如<1mm时的迁移率变化率）",
+            "未提出厚度监控的在线检测方案"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充机械-电学耦合模型的数学表达式（如Stoney公式修正项）",
+        "增加不同金属氧化物体系（如ZnO基vs InGaZnO基）的厚度敏感性对比",
+        "引用SID 228-2016中关于柔性显示器机械可靠性的测试规范",
+        "提供典型工艺窗口（如溅射功率/沉积速率与厚度均匀性的关系曲线）"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 44,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确阐述几何重构与电导率保持的定量关系",
+            "缺乏实验数据支撑多尺度协同效应的论证",
+            "未讨论sp²/sp³杂化态转变的具体能带结构变化"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI D63-0301关于纳米材料拉伸测试标准",
+            "缺少CVD工艺参数（如生长温度、催化剂类型）描述"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及石墨烯边缘态对载流子迁移的影响",
+            "未对比MGG与传统平面结构的界面散射差异"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体良率提升数据（如对比实验批次）",
+            "缺乏与现有专利US20210126123A1的技术差异分析"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充石墨烯卷曲半径与应变梯度的数学模型",
+        "增加XPS/Raman光谱验证sp²网络重构的实验数据",
+        "引用SID 2023显示周关于柔性TFT的最新技术路线图"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 45,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未深入分析力学失效的根本机理（如位错增殖或界面剥离）",
+            "未提及近期技术趋势如自修复材料应用"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化成本优化指标",
+            "缺乏具体良率提升验证方案"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充异质结界面应力分布的有限元分析",
+        "增加对SEMI标准中柔性器件机械可靠性测试规范的引用",
+        "对比说明与近期专利（如US20220123332A1）的技术差异",
+        "提供模量梯度匹配的定量设计依据（如杨氏模量比值范围）"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 46,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未明确引用SEMI/SID标准验证电导率保持率测试方法",
+            "未说明MGG结构与近期石墨烯专利（如US2022010321A1）的规避关系"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析零带隙导致亚阈值摆幅退化的载流子输运机理",
+            "未对比MGG结构与传统FET结构的跨导变化率"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化CVD工艺成本降低比例（仅提及工艺简化）",
+            "未提供器件在柔性AMOLED阵列中的实际良率提升数据"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充SEMI D6-1102标准中关于柔性器件电导率测试的引用",
+        "增加与US2022010321A1专利在结构参数上的差异性对比",
+        "补充MGG结构对亚阈值摆幅（SS）的影响机理分析",
+        "提供CVD工艺成本降低的具体百分比及量产验证数据"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 47,
+      "overall_quality": "high",
+      "numeric_score": 0.88,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": [
+            "未明确说明迁移率差异的实验测量条件（如温度、电场强度等）",
+            "未讨论分子排列调控的具体工艺参数（如旋涂速率、退火温度）"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用具体文献支持100倍差异的结论",
+            "未区分P3HT在不同介电层（如SiO2/PVDF）的排列差异"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及分子取向与π-π堆积间距的定量关系",
+            "未提及垂直排列对阈值电压/亚阈值摆幅的影响"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体工艺优化方案（如自组装单层膜诱导排列）",
+            "未量化迁移率提升对器件性能（如响应时间、功耗）的具体影响"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充迁移率差异的实验验证条件及文献来源",
+        "增加分子排列调控的工艺参数窗口分析",
+        "引入XRD/GISAXS等表征技术说明排列状态表征方法",
+        "结合近期顶栅结构器件研究说明应用扩展性"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 48,
+      "overall_quality": "high",
+      "numeric_score": 0.92,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": []
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": []
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未提及分子链取向与晶界缺陷密度的定量关系",
+            "未关联最新研究进展如二维材料异质结的影响"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供具体工艺参数优化窗口",
+            "缺乏迁移率提升与器件可靠性的关联分析"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充分子排列角度与迁移率各向异性的定量模型",
+        "增加对柔性基板热膨胀系数匹配性的讨论",
+        "引用SEMI C12-0703标准中关于有机半导体薄膜的测试规范"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 49,
+      "overall_quality": "low",
+      "numeric_score": 0.28,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "未提供任何推理步骤，完全缺失问题关键点分析",
+            "未建立分子排列方向与迁移率之间的因果关系框架",
+            "未涉及任何工艺参数或物理机制的讨论"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未描述P3HT材料的半导体特性",
+            "未引用迁移率各向异性的实验数据",
+            "未提及晶体管阈值电压或载流子注入势垒等关键参数"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析分子取向对π-π堆积间距的影响机理",
+            "未讨论晶界散射或链间耦合等缺陷机制",
+            "未涉及有机半导体中电荷传输理论模型"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提供任何工程优化方案",
+            "未提及柔性显示或可穿戴器件的应用背景",
+            "未讨论各向异性对器件设计的影响"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "应解释分子链排列对π电子云重叠的影响机制",
+        "需引用G. Horowitz等人的偶极矩模型理论",
+        "应讨论晶粒取向度与迁移率关系的实验数据",
+        "需补充XRD或AFM表征方法的分析维度"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 50,
+      "overall_quality": "low",
+      "numeric_score": 0.28,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "未提供任何推理步骤",
+            "缺乏因果关系分析",
+            "未讨论表面能主导的生长机制（如Volmer-Weber模式）",
+            "未建立厚度与岛状生长的物理关联"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未分析钯薄膜表面能与氢气吸附的物性关系",
+            "未引用磁控溅射关键参数（如溅射气压、基板温度）",
+            "未提及SEMI C66-0703（溅射薄膜标准）",
+            "未讨论近期钯基传感器专利（如US20220106894A1）"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未解析岛状生长对氢气吸附位点的影响机理",
+            "未涉及表面扩散能垒与薄膜连续性的关系",
+            "未比较3nm与1nm厚度的氢致相变差异"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提出改善薄膜连续性的工艺方案（如衬底修饰）",
+            "未量化检测限差异的工程实现路径",
+            "未评估岛状结构对长期稳定性的潜在影响"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "基于表面能主导的Volmer-Weber生长模型解释岛状结构形成",
+        "结合钯的表面能（2.0 J/m²）与氢吸附热力学参数分析",
+        "引用SEMI标准中的薄膜连续性评估方法",
+        "讨论原子层沉积（ALD）替代方案的可行性"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 51,
+      "overall_quality": "low",
+      "numeric_score": 0.3,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "未提供任何推理步骤",
+            "未分析工艺参数与结晶质量的因果关系",
+            "未讨论技术参数合理性",
+            "未识别潜在故障点"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未描述材料物性特征",
+            "未引用制程参数标准",
+            "未关联国际标准规范",
+            "未规避专利技术风险"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析迁移率波动的根本原因",
+            "未讨论印刷电子技术趋势",
+            "未识别结晶质量控制瓶颈"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提供工程实施方案",
+            "未量化工艺优化效益",
+            "未提出良率提升路径"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "建立印刷参数（粘度/版深/线数）与结晶动力学的定量模型",
+        "引用Nature Materials 2021关于聚合物半导体结晶机制的研究",
+        "对比旋涂与印刷的剪切力差异对晶体取向的影响",
+        "分析油墨溶剂挥发速率与成核竞争机制",
+        "建议采用原位XRD监测结晶过程"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 52,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未完整覆盖关键工艺参数（如基板温度、环境湿度未提及）",
+            "分子排列取向与载流子迁移率的定量关系未明确",
+            "缺乏参数优化的故障回溯分析（如转速过高导致薄膜破裂）"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "未明确有机半导体材料类型（如P3HT或小分子材料）",
+            "蒸发温度范围未与材料热稳定性关联",
+            "未引用SEMI C12-0302旋涂工艺标准"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析π-π堆叠取向与迁移率各向异性的关系",
+            "未提及近期文献报道的溶剂退火协同调控技术",
+            "未讨论界面能对分子自组装的影响机制"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供工艺窗口优化的DOE实验设计",
+            "缺乏膜厚均匀性（±5%）与迁移率波动的量化关系",
+            "未考虑卷对卷制造中的溶剂挥发速率控制"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充基板预处理（如SAMs）对取向调控的影响",
+        "增加工艺参数与迁移率的Arrhenius关系分析",
+        "引用Nature Materials 2022年关于有机半导体取向控制的最新研究",
+        "提供典型工艺参数范围（如转速800-4000 rpm的梯度实验）"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 53,
+      "overall_quality": "medium",
+      "numeric_score": 0.72,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "medium",
+          "issues": [
+            "未明确溅射功率与厚度控制的非线性关系（如功率增加导致溅射速率提升但伴随粒子能量分布变化）",
+            "未讨论基板温度对表面扩散能垒的影响机制",
+            "缺乏工艺窗口优化的实验设计逻辑（如DOE方法）"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "medium",
+          "issues": [
+            "未引用SEMI C6-2001标准中关于磁控溅射薄膜均匀性的规范",
+            "钯膜附着力3.2N/m与ASTM D3359标准的对比缺失",
+            "未说明20ppm H₂检测限与ISO 20645标准的符合性"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未分析界面应力导致的薄膜开裂失效机理",
+            "未提及原子层沉积（ALD）等替代工艺的对比",
+            "未讨论表面等离子体共振效应对传感稳定性的影响"
+          ]
+        },
+        "application_value": {
+          "score": "high",
+          "issues": []
+        }
+      },
+      "improvement_suggestions": [
+        "补充溅射参数与薄膜应力的定量关系模型（如Stoney公式应用）",
+        "增加与近期专利US20220106897A1的工艺差异性分析",
+        "提供不同弯曲半径（如5mm vs 10mm）的性能退化数据",
+        "说明工艺参数在卷对卷制造中的扩展性验证"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 54,
+      "overall_quality": "high",
+      "numeric_score": 0.88,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "high",
+          "issues": [
+            "未明确说明油墨流变特性与机械稳定性之间的定量关系",
+            "循环拉伸性能指标未区分材料本征失效与界面剥离效应"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "high",
+          "issues": [
+            "未引用SEMI C12-0703关于可拉伸器件测试标准",
+            "银纳米线/PDMS复合材料的杨氏模量参数缺失"
+          ]
+        },
+        "domain_depth": {
+          "score": "medium",
+          "issues": [
+            "未涉及界面应力缓冲层设计对机械稳定性的影响",
+            "缺乏对近期可拉伸电极专利（如US2022010321A1）的规避分析"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未提供不同印刷技术对应的设备投资成本对比",
+            "良率提升路径缺乏具体工艺窗口优化参数"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充油墨粘弹性参数与印刷分辨率的定量关系模型",
+        "增加基于SEMI标准的机械稳定性测试方法说明",
+        "对比分析各技术路线对应的材料成本与设备折旧周期",
+        "引入界面工程优化方案（如梯度模量设计）"
+      ],
+      "sft_suitable": true
+    },
+    {
+      "index": 55,
+      "overall_quality": "low",
+      "numeric_score": 0.35,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "未提供具体解决方案步骤",
+            "缺乏因果关系论证",
+            "未说明工艺参数选择依据",
+            "未考虑可能的故障点分析"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未明确材料特性参数",
+            "未引用具体制程参数",
+            "未标注标准引用来源",
+            "未说明专利规避方案"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析缺陷根本原因",
+            "未提及最新技术趋势",
+            "未识别关键工艺瓶颈"
+          ]
+        },
+        "application_value": {
+          "score": "medium",
+          "issues": [
+            "未量化工程可行性验证",
+            "未提供成本效益分析",
+            "未给出具体良率提升方案"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充具体材料选择方案（如PI基板改性方法）",
+        "增加界面工程实施方案（如缓冲层厚度参数）",
+        "引用SEMI D6311标准中关于热稳定性测试规范",
+        "说明与近期专利US20220123056A1的区别方案",
+        "提供表面粗糙度改善的实验数据对比"
+      ],
+      "sft_suitable": false
+    },
+    {
+      "index": 56,
+      "overall_quality": "low",
+      "numeric_score": 0.32,
+      "detailed_scores": {
+        "reasoning_chain": {
+          "score": "low",
+          "issues": [
+            "答案内容缺失，未提供具体物理机制分析",
+            "未涉及界面应力分布与载流子传输路径的关联性",
+            "缺乏从材料力学与电学特性耦合角度的论证"
+          ]
+        },
+        "technical_accuracy": {
+          "score": "low",
+          "issues": [
+            "未引用SEMI/SID相关柔性电子器件测试标准",
+            "未提及石墨烯与PEDOT/PSS界面能带结构参数",
+            "未说明弯曲应变与载流子迁移率变化的定量关系"
+          ]
+        },
+        "domain_depth": {
+          "score": "low",
+          "issues": [
+            "未分析界面应力导致的晶格畸变效应",
+            "未讨论PEDOT/PSS相分离结构在形变中的演变",
+            "未涉及接触电阻变化对整体灵敏度的影响"
+          ]
+        },
+        "application_value": {
+          "score": "low",
+          "issues": [
+            "未提出具体的工艺优化方案",
+            "未量化弯曲应变对检测限(LOD)的提升幅度",
+            "未评估该现象对柔性生物传感器的工程应用价值"
+          ]
+        }
+      },
+      "improvement_suggestions": [
+        "补充界面应力分布的有限元仿真分析",
+        "增加载流子迁移率随应变变化的实验数据支持",
+        "引用Nature Materials 2022关于二维材料柔性器件的最新研究成果",
+        "建立应力-电阻响应的定量数学模型"
+      ],
+      "sft_suitable": false
+    }
+  ],
+  "summary": {
+    "excellence_rate": 0.38596491228070173,
+    "improvement_needed_rate": 0.2631578947368421,
+    "overall_assessment": "good"
+  },
+  "generated_at": "2025-08-13T13:18:44.389680"
+}
