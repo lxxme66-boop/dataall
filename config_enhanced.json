@@ -1,0 +1,84 @@
+{
+  "model_config": {
+    "use_original_prompts": true,
+    "preserve_all_templates": true,
+    "comment": "保持所有原有的prompt模板和生成逻辑"
+  },
+  
+  "volcano_config": {
+    "enabled": false,
+    "api_key": "",
+    "endpoint": "https://ark.cn-beijing.volces.com/api/v3",
+    "model": "deepseek-r1",
+    "comment": "火山API作为可选后端，不改变prompt"
+  },
+  
+  "parallel_config": {
+    "max_workers": 4,
+    "batch_size": 16,
+    "comment": "多线程配置，不影响生成逻辑"
+  },
+  
+  "checkpoint_config": {
+    "enabled": true,
+    "checkpoint_dir": "checkpoints",
+    "save_interval": 5,
+    "comment": "断点续跑配置"
+  },
+  
+  "generation_config": {
+    "temperature": 0.7,
+    "max_tokens": 4096,
+    "top_p": 0.95,
+    "comment": "保持原有的生成参数"
+  },
+  
+  "steps": {
+    "1.1": {
+      "name": "text_quality_evaluation",
+      "enabled": true,
+      "use_original": true
+    },
+    "1.2": {
+      "name": "text_filtering",
+      "enabled": true,
+      "use_original": true
+    },
+    "1.3": {
+      "name": "text_processing",
+      "enabled": true,
+      "use_original": true
+    },
+    "2.1": {
+      "name": "question_generation",
+      "enabled": true,
+      "use_original": true,
+      "support_parallel": true,
+      "support_checkpoint": true
+    },
+    "2.2": {
+      "name": "question_evaluation",
+      "enabled": true,
+      "use_original": true
+    },
+    "2.3": {
+      "name": "answer_generation",
+      "enabled": true,
+      "use_original": true,
+      "support_parallel": true,
+      "support_checkpoint": true
+    },
+    "2.4": {
+      "name": "answer_evaluation",
+      "enabled": true,
+      "use_original": true
+    },
+    "3.1": {
+      "name": "final_evaluation",
+      "enabled": true,
+      "use_original": true,
+      "support_parallel": true,
+      "support_checkpoint": true
+    }
+  }
+}
