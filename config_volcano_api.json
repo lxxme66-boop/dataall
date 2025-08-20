@@ -1,0 +1,63 @@
+{
+  "api": {
+    "use_local_models": false,
+    "use_volcano_api": true,
+    "volcano_api_key": "YOUR_VOLCANO_API_KEY_HERE",
+    "volcano_endpoint": "https://ark.cn-beijing.volces.com/api/v3",
+    "model": "deepseek-r1",
+    "timeout": 300.0
+  },
+  "models": {
+    "qa_generator_model": {
+      "name": "deepseek-r1",
+      "temperature": 0.7,
+      "max_tokens": 4096,
+      "top_p": 0.95
+    },
+    "quality_checker_model": {
+      "name": "deepseek-r1",
+      "temperature": 0.3,
+      "max_tokens": 4096
+    }
+  },
+  "paths": {
+    "pdf_dir": "data/pdfs",
+    "text_dir": "data/texts",
+    "output_dir": "data/output",
+    "qa_output_dir": "data/qa_results",
+    "pdf_output_dir": "data/qa_results/pdfs",
+    "text_output_dir": "data/qa_results/texts",
+    "log_dir": "logs"
+  },
+  "processing": {
+    "chunk_size": 2000,
+    "chunk_overlap": 200,
+    "max_chunks_per_file": 50,
+    "batch_size": 32,
+    "pool_size": 1,
+    "timeout": 300,
+    "max_retries": 3,
+    "retry_delay": 1.0,
+    "max_workers": 16
+  },
+  "quality_check": {
+    "enabled": true,
+    "min_answer_length": 50,
+    "max_answer_length": 2000,
+    "require_context": true,
+    "check_relevance": true,
+    "min_quality_score": 0.7
+  },
+  "resume": {
+    "enabled": true,
+    "checkpoint_dir": ".checkpoints",
+    "save_interval": 10
+  },
+  "output": {
+    "format": "json",
+    "include_metadata": true,
+    "include_quality_scores": true,
+    "save_intermediate": true,
+    "generate_report": true
+  }
+}
