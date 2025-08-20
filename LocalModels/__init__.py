@@ -43,4 +43,17 @@ except ImportError:
     VLLMHTTPClient = None
     create_vllm_http_client = None
 
+# 尝试导入Volcano客户端
+try:
+    from .volcano_client import VolcanoAPIClient, VolcanoModelManager
+    VOLCANO_SUPPORT = True
+    __all__.extend([
+        'VolcanoAPIClient',
+        'VolcanoModelManager',
+    ])
+except ImportError:
+    VOLCANO_SUPPORT = False
+    VolcanoAPIClient = None
+    VolcanoModelManager = None
+
 __version__ = '0.1.0'

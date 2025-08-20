@@ -1,0 +1,144 @@
+{
+  "api": {
+    "use_volcano": true,
+    "volcano_api_key": "${VOLCANO_API_KEY}",
+    "volcano_endpoint_id": "${VOLCANO_ENDPOINT_ID}",
+    "volcano_region": "cn-beijing",
+    "fallback_to_local": false,
+    "api_base_url": "https://ark.cn-beijing.volces.com/api/v3"
+  },
+  "models": {
+    "volcano": {
+      "model_name": "deepseek-r1",
+      "temperature": 0.7,
+      "max_tokens": 4096,
+      "top_p": 0.95,
+      "frequency_penalty": 0.0,
+      "presence_penalty": 0.0,
+      "stop_sequences": [],
+      "request_timeout": 300
+    }
+  },
+  "parallel_processing": {
+    "max_workers": 32,
+    "batch_size": 200,
+    "use_multiprocessing": true,
+    "max_concurrent_api_calls": 100,
+    "api_timeout": 300,
+    "retry_attempts": 3,
+    "retry_delay": 2,
+    "rate_limit_per_minute": 600,
+    "enable_adaptive_throttling": true
+  },
+  "large_scale_processing": {
+    "target_qa_count": 20000,
+    "max_text_files": 4000,
+    "chunk_size": 2000,
+    "chunk_overlap": 200,
+    "questions_per_chunk": 5,
+    "enable_quality_filter": true,
+    "min_quality_score": 0.7,
+    "enable_deduplication": true,
+    "similarity_threshold": 0.85
+  },
+  "optimization": {
+    "enable_caching": true,
+    "cache_dir": "cache/volcano_deepseek",
+    "cache_ttl_hours": 24,
+    "enable_batch_optimization": true,
+    "enable_async_processing": true,
+    "enable_result_streaming": true,
+    "save_intermediate_results": true,
+    "checkpoint_interval": 100,
+    "enable_memory_optimization": true,
+    "max_memory_gb": 16
+  },
+  "monitoring": {
+    "enable_progress_tracking": true,
+    "log_level": "INFO",
+    "save_metrics": true,
+    "metrics_file": "metrics/volcano_processing_stats.json",
+    "enable_real_time_dashboard": false,
+    "report_interval_seconds": 30,
+    "enable_error_tracking": true,
+    "error_log_file": "logs/volcano_errors.log"
+  },
+  "qa_generation": {
+    "question_types": {
+      "factual": {
+        "ratio": 0.15,
+        "description": "事实型问题 - 获取具体参数、指标等",
+        "min_length": 10,
+        "max_length": 50
+      },
+      "comparison": {
+        "ratio": 0.15,
+        "description": "比较型问题 - 比较不同技术、材料或方案",
+        "min_length": 15,
+        "max_length": 60
+      },
+      "reasoning": {
+        "ratio": 0.50,
+        "description": "推理型问题 - 解释原理、机制和因果关系",
+        "min_length": 20,
+        "max_length": 80
+      },
+      "open_ended": {
+        "ratio": 0.20,
+        "description": "开放型问题 - 优化建议、改进方法等",
+        "min_length": 15,
+        "max_length": 70
+      }
+    },
+    "answer_generation": {
+      "use_cot": true,
+      "cot_steps": [
+        "理解问题核心",
+        "分析相关技术要点",
+        "构建逻辑推理链",
+        "生成详细答案",
+        "总结关键信息"
+      ],
+      "min_answer_length": 50,
+      "max_answer_length": 500,
+      "include_references": true,
+      "include_examples": true
+    }
+  },
+  "data_quality": {
+    "enable_quality_check": true,
+    "quality_dimensions": {
+      "accuracy": 0.3,
+      "completeness": 0.25,
+      "relevance": 0.25,
+      "clarity": 0.2
+    },
+    "rejection_threshold": 0.5,
+    "enhancement_threshold": 0.7,
+    "enable_auto_correction": true,
+    "enable_fact_checking": false
+  },
+  "output": {
+    "output_formats": ["json", "jsonl", "csv", "parquet"],
+    "enable_compression": true,
+    "compression_format": "gzip",
+    "split_output_files": true,
+    "max_records_per_file": 5000,
+    "include_metadata": true,
+    "metadata_fields": [
+      "source_file",
+      "chunk_id",
+      "generation_time",
+      "model_version",
+      "quality_score"
+    ]
+  },
+  "paths": {
+    "input_dir": "data/texts",
+    "output_dir": "data/volcano_output",
+    "temp_dir": "temp/volcano",
+    "log_dir": "logs",
+    "cache_dir": "cache/volcano_deepseek",
+    "checkpoint_dir": "checkpoints/volcano"
+  }
+}
