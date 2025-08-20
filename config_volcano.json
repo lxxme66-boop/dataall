@@ -1,0 +1,52 @@
+{
+  "api": {
+    "use_volcano": true,
+    "volcano_api_key": "${VOLCANO_API_KEY}",
+    "volcano_endpoint_id": "${VOLCANO_ENDPOINT_ID}",
+    "volcano_region": "cn-beijing",
+    "fallback_to_local": true,
+    "local_vllm_url": "http://localhost:8000/v1"
+  },
+  "models": {
+    "volcano": {
+      "model_name": "Qwen3-235B-A22B-Instruct",
+      "temperature": 0.7,
+      "max_tokens": 4096,
+      "top_p": 0.95,
+      "frequency_penalty": 0.0,
+      "presence_penalty": 0.0
+    }
+  },
+  "parallel_processing": {
+    "max_workers": 16,
+    "batch_size": 100,
+    "use_multiprocessing": true,
+    "max_concurrent_api_calls": 50,
+    "api_timeout": 300,
+    "retry_attempts": 3,
+    "retry_delay": 2
+  },
+  "large_scale_processing": {
+    "target_qa_count": 20000,
+    "max_text_files": 5000,
+    "chunk_size": 2000,
+    "chunk_overlap": 200,
+    "questions_per_chunk": 4,
+    "enable_quality_filter": true,
+    "min_quality_score": 0.7
+  },
+  "optimization": {
+    "enable_caching": true,
+    "cache_dir": "cache/volcano",
+    "enable_batch_optimization": true,
+    "enable_async_processing": true,
+    "enable_result_streaming": true,
+    "save_intermediate_results": true
+  },
+  "monitoring": {
+    "enable_progress_tracking": true,
+    "log_level": "INFO",
+    "save_metrics": true,
+    "metrics_file": "metrics/processing_stats.json"
+  }
+}
