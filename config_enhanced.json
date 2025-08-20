@@ -1,84 +1,79 @@
 {
-  "model_config": {
-    "use_original_prompts": true,
-    "preserve_all_templates": true,
-    "comment": "保持所有原有的prompt模板和生成逻辑"
-  },
-  
-  "volcano_config": {
-    "enabled": false,
-    "api_key": "",
-    "endpoint": "https://ark.cn-beijing.volces.com/api/v3",
+  "api": {
+    "use_local_models": true,
+    "use_volcano_api": false,
+    "volcano_api_key": "",
+    "volcano_endpoint": "https://ark.cn-beijing.volces.com/api/v3",
     "model": "deepseek-r1",
-    "comment": "火山API作为可选后端，不改变prompt"
+    "timeout": 300.0
   },
-  
-  "parallel_config": {
-    "max_workers": 4,
-    "batch_size": 16,
-    "comment": "多线程配置，不影响生成逻辑"
+  "models": {
+    "qa_generator_model": {
+      "name": "qwq_32",
+      "temperature": 0.7,
+      "max_tokens": 4096,
+      "top_p": 0.95
+    },
+    "quality_checker_model": {
+      "name": "qwq_32",
+      "temperature": 0.3,
+      "max_tokens": 4096
+    }
   },
-  
-  "checkpoint_config": {
+  "paths": {
+    "pdf_dir": "data/pdfs",
+    "text_dir": "data/texts",
+    "output_dir": "data/output",
+    "qa_output_dir": "data/qa_results",
+    "pdf_output_dir": "data/qa_results/pdfs",
+    "text_output_dir": "data/qa_results/texts",
+    "log_dir": "logs"
+  },
+  "processing": {
+    "chunk_size": 2000,
+    "chunk_overlap": 200,
+    "max_chunks_per_file": 50,
+    "batch_size": 2,
+    "pool_size": 1,
+    "timeout": 300,
+    "max_retries": 3,
+    "retry_delay": 1.0,
+    "max_workers": 8,
+    "use_multithread": true
+  },
+  "quality_check": {
     "enabled": true,
-    "checkpoint_dir": "checkpoints",
-    "save_interval": 5,
-    "comment": "断点续跑配置"
+    "min_answer_length": 50,
+    "max_answer_length": 2000,
+    "require_context": true,
+    "check_relevance": true,
+    "min_quality_score": 0.7
   },
-  
-  "generation_config": {
-    "temperature": 0.7,
-    "max_tokens": 4096,
-    "top_p": 0.95,
-    "comment": "保持原有的生成参数"
+  "resume": {
+    "enabled": true,
+    "checkpoint_dir": ".checkpoints",
+    "save_interval": 10,
+    "auto_resume": true
   },
-  
-  "steps": {
-    "1.1": {
-      "name": "text_quality_evaluation",
-      "enabled": true,
-      "use_original": true
+  "output": {
+    "format": "json",
+    "include_metadata": true,
+    "include_quality_scores": true,
+    "save_intermediate": true,
+    "generate_report": true
+  },
+  "prompts": {
+    "text_processing": {
+      "index": 9,
+      "temperature": 0.7
     },
-    "1.2": {
-      "name": "text_filtering",
-      "enabled": true,
-      "use_original": true
+    "question_generation": {
+      "temperature": 0.8,
+      "diversity": true
     },
-    "1.3": {
-      "name": "text_processing",
-      "enabled": true,
-      "use_original": true
-    },
-    "2.1": {
-      "name": "question_generation",
-      "enabled": true,
-      "use_original": true,
-      "support_parallel": true,
-      "support_checkpoint": true
-    },
-    "2.2": {
-      "name": "question_evaluation",
-      "enabled": true,
-      "use_original": true
-    },
-    "2.3": {
-      "name": "answer_generation",
-      "enabled": true,
-      "use_original": true,
-      "support_parallel": true,
-      "support_checkpoint": true
-    },
-    "2.4": {
-      "name": "answer_evaluation",
-      "enabled": true,
-      "use_original": true
-    },
-    "3.1": {
-      "name": "final_evaluation",
-      "enabled": true,
-      "use_original": true,
-      "support_parallel": true,
-      "support_checkpoint": true
+    "answer_generation": {
+      "use_cot": true,
+      "temperature": 0.6
     }
   }
 }
